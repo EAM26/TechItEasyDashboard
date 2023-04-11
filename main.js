@@ -161,3 +161,56 @@ const inventory = [
     sold: 8,
   },
 ];
+
+// Op 1A
+// create new array
+const tvTypes = []
+// map types of entries
+inventory.map((tv) => {
+  tvTypes.push(tv.type)
+})
+console.log(tvTypes)
+console.log("*****************")
+
+// Op 1B
+// filter where stock - sold === 0
+const soldOut = inventory.filter((tv) => tv.originalStock - tv.sold === 0)
+console.log(soldOut)
+console.log("*****************")
+
+// Op 1C
+// filter op ambiLight
+const ambiTvs = inventory.filter((tv) => tv.options.ambiLight === true)
+console.log(ambiTvs)
+console.log("*****************")
+
+// Op 1D
+// Sort op prijs (originele array)
+inventory.sort((a, b) => a.price - b.price)
+console.log(inventory)
+console.log("*****************")
+
+
+// set integer to 0 and add sold
+let soldTotal = 0
+inventory.map((tv)=> {
+  soldTotal += tv.sold;
+})
+console.log(soldTotal)
+const tvsSold = document.getElementById('tv-sold')
+tvsSold.innerHTML = `<p>Total tv's sold: ${soldTotal}</p>`
+console.log("*****************")
+
+let purchasedTotal = 0
+inventory.map((tv)=> {
+  purchasedTotal += tv.originalStock;
+})
+const purchasedTvs = document.getElementById('tv-purch')
+console.log(purchasedTotal)
+purchasedTvs.innerHTML = `<p>Total tv's purchased: ${purchasedTotal}</p>`
+console.log("*****************")
+
+const restTvs = purchasedTotal - soldTotal;
+const rest = document.getElementById('rest')
+rest.innerHTML = `<p>Total tv's left: ${restTvs}</p>`
+
