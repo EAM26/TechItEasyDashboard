@@ -1,11 +1,11 @@
-#tv-sold {
+#number-tvs-sold {
     color: green;
 }
 
-#tv-purch {
+#number-tvs-bought {
     color: blue;
 }
 
-#rest {
+#number-tvs-in-stock {
     color: red;
 }
