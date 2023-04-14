@@ -2,7 +2,6 @@
 let counterSold  = 0;
 inventory.map((tv)=> {
     counterSold += tv.sold;
-    return null;
 })
 console.log(counterSold);
 
@@ -16,17 +15,13 @@ let counterBought = 0;
 // use map to add value tv.originalStock
 inventory.map((tv)=> {
     counterBought += tv.originalStock;
-    return null;
 })
 // log total bought, create id in html and use innerHTML to show total tv's bought, use id in css
 console.log(counterBought);
-const numberTvsBought = document.getElementById("number-tvs-bought");
-numberTvsBought.innerHTML = "<h3>Number of tv's bought: "+counterBought+"</h3>";
+document.getElementById("number-tvs-bought").innerHTML = "<h3>Number of tv's bought: "+counterBought+"</h3>";
 
-// 2e create var to calc tv's in stock (bought-sold), id in html, use inner html and css
-const inStock = counterBought - counterSold;
-const numberTvsInStock = document.getElementById("number-tvs-in-stock");
-numberTvsInStock.innerHTML = "<h3>Number of tv's in stock: "+inStock+"</h3>"
+// 2e originalStock minus sold => in stock, create id in html, use inner html and css
+document.getElementById("number-tvs-in-stock").innerHTML = "<h3>Number of tv's in stock: "+ (counterBought - counterSold) +"</h3>"
 
 
 
