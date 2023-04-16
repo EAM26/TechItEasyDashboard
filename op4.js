@@ -4,14 +4,16 @@ function showName(tv) {
     return tv.brand + " " + tv.type + " - " + tv.name;
 }
 
+
 // 4b
 function showPrice(tv) {
     return "€" + tv.price + ",-";
 }
 
+
 // 4c
 function showSizes(tv) {
-    // count for adding slash if not last size
+    // count variable for adding slash if not last size
     let count = 1;
     let allSizes = ""
     tv.availableSizes.map((size) => {
@@ -24,24 +26,28 @@ function showSizes(tv) {
     return allSizes;
 }
 
+
 // 4d
 function showInfoSingleTV(tv) {
-    console.log(showName(tv));
-    console.log(showPrice(tv));
-    console.log(showSizes(tv));
-    console.log("\n");
+    return  showName(tv) + "<br>" + showPrice(tv) + "<br>" + showSizes(tv) + "<br><br>";
 }
 
-showInfoSingleTV(inventory.find((tv) => tv.type === "43PUS6504/12"))
+document.getElementById("info-single-tv").innerHTML =
+    showInfoSingleTV(inventory.find((tv) => tv.type === "43PUS6504/12"));
+
 
 // 4e
 function showAllTVs(myList) {
+    // create variable for return value as one long string
+    let infoAllTVs = "****************<br><br>";
     myList.map((tv)=> {
-        showInfoSingleTV(tv);
+        infoAllTVs += showInfoSingleTV(tv);
     })
+    infoAllTVs += "****************<br><br>";
+    return infoAllTVs;
 }
 
-showAllTVs(inventory);
+document.getElementById("info-all-tvs").innerHTML = showAllTVs(inventory);
 
 
 
