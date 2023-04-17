@@ -1,3 +1,4 @@
+import {inventory} from './main.js'
 // 2a Create varibable as counterSold and use map to add tv.sold
 let counterSold  = 0;
 inventory.map((tv)=> {

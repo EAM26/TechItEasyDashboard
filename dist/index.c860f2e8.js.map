@@ -1,0 +1,1 @@
+{"mappings":"AAAA,SAAS,YAAY;IACjB,SAAS,cAAc,CAAC,eAAe,SAAS,GAAG;AACvD","sources":["src/test.js"],"sourcesContent":["function alertTest() {\r\n    document.getElementById(\"test-button\").innerHTML = \"<h3>Test button clicked</h3>\";\r\n}"],"names":[],"version":3,"file":"index.c860f2e8.js.map","sourceRoot":"/__parcel_source_root/"}

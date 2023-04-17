@@ -1,0 +1,33 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.content {
+  padding: 20px 50px;
+}
+
+#number-tvs-sold {
+  color: green;
+}
+
+#number-tvs-bought {
+  color: #00f;
+}
+
+#number-tvs-in-stock {
+  color: red;
+}
+
+button {
+  text-align: center;
+  border: none;
+  margin: 20px;
+  padding: 15px 32px;
+  font-size: 20px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+/*# sourceMappingURL=index.1303bb05.css.map */

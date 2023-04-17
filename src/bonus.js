@@ -1,3 +1,6 @@
+import {inventory} from './main.js'
+import {showAllTVs} from "./op4";
+
 function sortPriceLowHigh() {
     const sortedList = inventory.sort((a, b) => a.price - b.price);
     //bonus 1
@@ -7,13 +10,13 @@ function sortPriceLowHigh() {
 }
 
 function sortPriceHighLow() {
+
     const sortedList = inventory.sort((a, b) => b.price - a.price);
     //bonus 1
     console.log(sortedList);
     // bonus 2
     document.getElementById("show-selection").innerHTML = showAllTVs(sortedList)
 }
-
 function showAmbiLight() {
     const hasAmbiLight = inventory.filter((tv) => tv.options.ambiLight===true);
     // bonus 1
@@ -23,9 +26,18 @@ function showAmbiLight() {
 }
 
 function showSoldOut() {
-    const soldOut = inventory.filter((tv) => tv.options.ambiLight===true);
+    const soldOut = inventory.filter((tv) => tv.sold===tv.originalStock);
     // bonus 1
     console.log(soldOut);
     // bonus 2
     document.getElementById("show-selection").innerHTML = showAllTVs(soldOut);
 }
+
+
+document.getElementById("sort-price-low-high").addEventListener("click", sortPriceLowHigh)
+document.getElementById("sort-price-high-low").addEventListener("click", sortPriceHighLow)
+document.getElementById("show-ambilight").addEventListener("click", showAmbiLight)
+document.getElementById("sold-out").addEventListener("click", showSoldOut)
+
+
+

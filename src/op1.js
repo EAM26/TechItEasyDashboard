@@ -1,3 +1,4 @@
+import {inventory} from './main.js'
 // 1a Use array.map to create new array with type property
 const allTypeNames = inventory.map((tv)=> tv.type);
 console.log(allTypeNames)

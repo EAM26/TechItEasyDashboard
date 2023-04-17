@@ -1,3 +1,4 @@
+import {inventory} from './main.js'
 // 3a Collect all tv names with map and add to String
 // create id and use innerHTML to make list
 let brandNamesList = "<ul>";

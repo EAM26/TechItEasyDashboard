@@ -1,18 +1,19 @@
+import {inventory} from './main.js'
 // 4a
 // shows brand type and name
-function showName(tv) {
+export function showName(tv) {
     return tv.brand + " " + tv.type + " - " + tv.name;
 }
 
 
 // 4b
-function showPrice(tv) {
+export function showPrice(tv) {
     return "€" + tv.price + ",-";
 }
 
 
 // 4c
-function showSizes(tv) {
+export function showSizes(tv) {
     // count variable for adding slash if not last size
     let count = 1;
     let allSizes = ""
@@ -28,7 +29,7 @@ function showSizes(tv) {
 
 
 // 4d
-function showInfoSingleTV(tv) {
+export function showInfoSingleTV(tv) {
     return  showName(tv) + "<br>" + showPrice(tv) + "<br>" + showSizes(tv) + "<br><br>";
 }
 
@@ -37,7 +38,7 @@ document.getElementById("info-single-tv").innerHTML =
 
 
 // 4e
-function showAllTVs(myList) {
+export function showAllTVs(myList) {
     // create variable for return value as one long string
     let infoAllTVs = "****************<br><br>";
     myList.map((tv)=> {
