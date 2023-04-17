@@ -23,7 +23,7 @@ function showAmbiLight() {
 }
 
 function showSoldOut() {
-    const soldOut = inventory.filter((tv) => tv.options.ambiLight===true);
+    const soldOut = inventory.filter((tv) => tv.sold===tv.originalStock);
     // bonus 1
     console.log(soldOut);
     // bonus 2
