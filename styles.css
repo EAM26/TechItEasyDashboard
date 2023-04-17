@@ -1,3 +1,14 @@
+* {
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+.content {
+    padding: 20px 50px;
+}
+
+
 #number-tvs-sold {
     color: green;
 }
@@ -8,4 +19,14 @@
 
 #number-tvs-in-stock {
     color: red;
+}
+
+button {
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 20px;
 }

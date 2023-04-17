@@ -11,5 +11,5 @@ const hasAmbiLight = inventory.filter((tv) => tv.options.ambiLight===true);
 console.log(hasAmbiLight);
 
 // 1d Use sort to sort original array on price low => high
-inventory.sort((a, b) => a.price - b.price);
-console.log(inventory)
+// inventory.sort((a, b) => a.price - b.price);
+// console.log(inventory)

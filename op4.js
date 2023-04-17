@@ -47,7 +47,7 @@ function showAllTVs(myList) {
     return infoAllTVs;
 }
 
-document.getElementById("info-all-tvs").innerHTML = showAllTVs(inventory);
+document.getElementById("show-selection").innerHTML = showAllTVs(inventory);
 
 
 

@@ -12,13 +12,18 @@
     <title>Tech It Easy Dashboard</title>
 </head>
 <body>
-<article id="number-tvs-sold"></article>
-<article id="number-tvs-bought"></article>
-<article id="number-tvs-in-stock"></article>
-<article id="brand-names"></article>
-<article id="brand-names-2"></article>
-<article id="info-single-tv"></article>
-<article id="info-all-tvs"></article>
-<button id="sort-price" type="button" onclick="alert('Hello world!')">Price ↑</button>
+<div class="content">
+    <article id="number-tvs-sold"></article>
+    <article id="number-tvs-bought"></article>
+    <article id="number-tvs-in-stock"></article>
+    <article id="brand-names"></article>
+    <article id="brand-names-2"></article>
+    <article id="info-single-tv"></article>
+    <article id="show-selection"></article>
+    <button id="sort-price-low-high" onclick="sortPriceLowHigh()" type="button">Price ↑</button>
+    <button id="sort-price-high-low" onclick="sortPriceHighLow()" type="button">Price ↓</button>
+    <button id="show-ambilight" onclick="showAmbiLight()" type="button">Ambilights Only</button>
+    <button id="sold-out" onclick="showSoldOut()" type="button">Sold out</button>
+</div>
 </body>
 </html>
